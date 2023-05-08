@@ -2,7 +2,12 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        mint: "#02c39a",
+        mintHover: "#029e7c",
+      }
+    }
   },
   plugins: []
 };

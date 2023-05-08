@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .font-playfair {
+    font-family: 'Playfair Display';
+  }
+}

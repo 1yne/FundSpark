@@ -33,7 +33,7 @@
 
 <div class="flex sideNavbar mr-6 flex-col gap-4">
 	<div class="rounded-lg bg-[#404040] p-2 flex justify-center">
-		<Logo size={36} />
+		<Logo size={32} />
 	</div>
 	<Paper
 		shadow="xl"

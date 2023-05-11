@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .font-playfair {
-    font-family: 'Playfair Display';
-  }
+	.font-mont {
+		font-family: 'Montserrat';
+	}
 }

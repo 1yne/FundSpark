@@ -12,6 +12,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@supabase/supabase-js": "^2.21.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -32,7 +33,10 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@supabase/supabase-js": "^2.21.0",
+		"@svelteuidev/composables": "^0.11.1",
+		"@svelteuidev/core": "^0.11.1",
+		"@svelteuidev/motion": "^0.11.1",
+		"carbon-icons-svelte": "^11.4.0",
 		"dotenv": "^16.0.3"
 	}
 }

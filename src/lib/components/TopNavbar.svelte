@@ -15,7 +15,7 @@
 				/>
 			{:else}
 				<div class="">
-					<UserAvatarFilledAlt size={46} />
+					<UserAvatarFilledAlt size={46} fill="white" />
 				</div>
 			{/if}
 		</a>

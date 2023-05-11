@@ -32,7 +32,7 @@
 </script>
 
 <div class="flex sideNavbar mr-6 flex-col gap-4">
-	<div class="rounded-lg bg-[#404040] p-2 flex justify-center">
+	<div class="rounded-lg bg-[#2d3134] p-2 flex justify-center">
 		<Logo size={32} />
 	</div>
 	<Paper
@@ -41,13 +41,13 @@
 			borderRadius: '0.5rem',
 			width: '100%',
 			height: '100%',
-			padding: '0',
+			padding: '8px',
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'center',
-			alignItems: 'center'
+			alignItems: 'center',
+			backgroundColor: "#1c1c25"
 		}}
-		withBorder
 	>
 		<div class="h-full flex flex-col justify-center gap-4">
 			{#each sidebarOptions as sidebarOption}

@@ -15,7 +15,7 @@
 	});
 </script>
 
-<div class="font-mont w-full h-full wrapper">
+<div class="font-mont w-full h-full wrapper bg-[#13121a]">
 	<slot />
 </div>
 

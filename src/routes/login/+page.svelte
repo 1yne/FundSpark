@@ -37,8 +37,8 @@
 	<div class="w-5/12">
 		<img src="/SignUpPic.jpeg" alt="A reaching hand" class="h-full w-full object-cover" />
 	</div>
-	<div class="h-full bg-black p-8 flex-grow">
-		<div class="bg-[#141414] w-full h-full rounded-lg p-8">
+	<div class="h-full p-8 flex-grow">
+		<div class="w-full h-full rounded-lg p-8">
 			<div class="content mx-16 flex h-full justify-center flex-col">
 				<h1 class="text-white text-4xl mb-4 font-mont">Welcome</h1>
 				<p class="text-white text-lg mb-8">

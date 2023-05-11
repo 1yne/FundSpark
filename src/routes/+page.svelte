@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div class="h-full flex">
-	<div class="content h-full px-20 w-7/12 bg-black text-white">
+	<div class="content h-full px-20 w-7/12 text-white">
 		<div class="nav py-5 flex justify-between font-mont">
 			<h1 class="text-3xl font-mont font-normal">FundSpark</h1>
 		</div>

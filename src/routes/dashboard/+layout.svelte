@@ -1,6 +1,9 @@
-<script>
+<script lang="ts">
 	import SideNavbar from '$lib/components/SideNavbar.svelte';
 	import TopNavbar from '$lib/components/TopNavbar.svelte';
+	import { fly } from 'svelte/transition';
+
+	export let data: import('./$types').LayoutData;
 </script>
 
 <div class="flex h-full w-full p-6 bg-[#13121a]">
@@ -8,7 +11,15 @@
 	<div class="flex-grow">
 		<TopNavbar />
 		<div class="content text-white">
-			<slot />
+			{#key data.url}
+				<div
+					in:fly={{ x: -5, duration: 300, delay: 300 }}
+					out:fly={{ x: -5, duration: 300 }}
+					class="w-full h-full"
+				>
+					<slot />
+				</div>
+			{/key}
 		</div>
 	</div>
 </div>

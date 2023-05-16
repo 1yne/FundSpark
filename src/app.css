@@ -4,6 +4,35 @@
 
 @layer components {
 	.font-mont {
-		font-family: 'Montserrat';
+		font-family: 'Cabin';
 	}
+}
+
+@keyframes slide-out {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.modal.closingAnimation {
+	display: block !important;
+	pointer-events: none !important;
+	inset: 0 !important;
+	animation: slide-out 500ms forwards !important;
+}
+
+.modal.closingAnimation::backdrop {
+	animation: fade-out 500ms forwards !important;
 }

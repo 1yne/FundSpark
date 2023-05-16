@@ -6,6 +6,8 @@
 	import Logout from 'carbon-icons-svelte/lib/Logout.svelte';
 	import Logo from '$lib/Logo.svelte';
 	import { Paper } from '@svelteuidev/core';
+	import { supabase } from '$lib/supabase';
+	import { goto, invalidateAll }  from '$app/navigation';
 
 	let sidebarOptions = [
 		{
@@ -28,13 +30,21 @@
 
 	let active = '';
 
-	function logout() {}
+	async function logout() {
+		const { error } = await supabase.auth.signOut()
+
+		if (error) {
+			console.log(error)
+		} else {
+			invalidateAll()
+		}
+	}
 </script>
 
 <div class="flex sideNavbar mr-6 flex-col gap-4">
-	<div class="rounded-lg bg-[#2d3134] p-2 flex justify-center">
+	<a href="/dashboard" class="rounded-lg bg-[#2d3134] p-2 flex justify-center items-center">
 		<Logo size={32} />
-	</div>
+	</a>
 	<Paper
 		shadow="xl"
 		override={{
@@ -65,7 +75,7 @@
 				</div>
 			{/each}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="p-2 rounded-lg transition-all hover:bg-mint/20" on:click={logout}>
+			<div class="p-2 rounded-lg transition-all hover:bg-mint/20 flex justify-center" on:click={logout}>
 				<Logout size={25} fill="gray" />
 			</div>
 		</div>

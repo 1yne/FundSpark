@@ -65,8 +65,8 @@
 				{#if currentSlide === 'signup'}
 					<div
 						class="inputSignup w-full h-full flex flex-col justify-between"
-						in:fly={{ x: -50, duration: 500, delay: 700 }}
-						out:fly={{ x: -50, duration: 500 }}
+						in:fly={{ x: 50, duration: 500, delay: 700 }}
+						out:fly={{ x: 50, duration: 500 }}
 					>
 						<div>
 							<div class="flex flex-col gap-4 rounded-lg mb-8 mt-6">
@@ -154,8 +154,8 @@
 				{:else}
 					<div
 						class="inputLogin w-full h-full flex flex-col justify-between"
-						in:fly={{ x: 50, duration: 500, delay: 700 }}
-						out:fly={{ x: 50, duration: 500 }}
+						in:fly={{ x: -50, duration: 500, delay: 700 }}
+						out:fly={{ x: -50, duration: 500 }}
 					>
 						<div> 
 							<div class="flex flex-col gap-4 rounded-lg mb-8 mt-6">

@@ -34,10 +34,10 @@
 		</Paper>
 	</div>
 	<div class="flex gap-4 items-center">
-		<button
-			on:click={openModal}
-			class="w-full h-full bg-mint p-2 rounded-lg px-4 text-sm hover:bg-mint/80 transition-all"
-			>Start a campaign</button
+		<a
+			href="/create"
+			class="w-full h-full bg-mint p-2 rounded-lg px-4 text-sm hover:bg-mint/80 transition-all flex justify-center items-center"
+			>Start a campaign</a
 		>
 		<a href="/dashboard/profile">
 			{#if $userStore?.profile_picture}

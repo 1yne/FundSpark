@@ -6,7 +6,8 @@ export default {
 			colors: {
 				mint: '#02c39a',
 				mintHover: '#029e7c',
-				mintHoverHover: '#008064'
+				mintHoverHover: '#008064',
+				blackBackground: "#1c1c25"
 			}
 		}
 	},

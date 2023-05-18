@@ -2,7 +2,7 @@
 	import { userStore } from '$lib/stores/UserStore';
 	import UserAvatarFilledAlt from 'carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte';
 	import Search from "carbon-icons-svelte/lib/Search.svelte";
-	import { TextInput, createStyles } from "@svelteuidev/core"
+	import { Paper } from "@svelteuidev/core"
 
 	function openModal() {
 		(document.querySelector('.modal') as HTMLDialogElement).showModal();
@@ -21,35 +21,17 @@
 				{ once: true }
 			);
 		}
-	}
-
-	const useInputStyles = createStyles(() => ({
-		'.svelteui-Input-input': {
-			height: '100% !important',
-			width: "100% !important",
-			minWidth: "24rem !important",
-			backgroundColor: "#2d3134 !important",
-			border: "1px solid #2d3134 !important"
-		},
-		'div': {
-			height: '100% !important',
-			width: "100% !important",
-			display: "flex !important",
-			alignItems: "center !important"
-		},
-		'.svelteui-Input-icon': {
-			fill: "#687178 !important",
-			height: "24px",
-			width: "24px",
-			padding: "2px"
-		}
-	}));
-	$: ({ getStyles: getSearchStyles } = useInputStyles());
+	};
 </script>
 
 <div class="flex topNavbar mb-6 justify-between">
 	<div class="flex items-center">
-		<TextInput override={{ height: "100%", minWidth: "24rem", width: "100%" }} class={getSearchStyles()} icon={Search} iconProps={{ size: 32, color: "blue" }} />
+		<Paper override={{ backgroundColor: "#2d3134", padding: "12px" }}>
+			<div class="flex gap-4 items-center">
+				<Search size={24} fill="white" />
+				<input class="bg-[#2d3134] outline-none text-white min-w-[16rem]" />
+			</div>
+		</Paper>
 	</div>
 	<div class="flex gap-4 items-center">
 		<button
@@ -74,7 +56,7 @@
 </div>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<dialog class="modal p-0" id="modal" on:click={closeModal}>
+<dialog class="modal p-0 bg-blackBackground text-white" id="modal" on:click={closeModal}>
 	<div class="modal-wrapper p-4 w-full h-full">
 		<h1 class="text-4xl font-bold">Create your campaign</h1>
 		<button on:click={closeModal} class="closeButton">Close</button>

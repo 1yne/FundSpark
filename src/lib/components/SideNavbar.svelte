@@ -7,7 +7,7 @@
 	import Logo from '$lib/Logo.svelte';
 	import { Paper } from '@svelteuidev/core';
 	import { supabase } from '$lib/supabase';
-	import { goto, invalidateAll }  from '$app/navigation';
+	import { invalidateAll }  from '$app/navigation';
 
 	let sidebarOptions = [
 		{

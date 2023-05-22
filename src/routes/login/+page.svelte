@@ -2,6 +2,7 @@
 	import { supabase } from '$lib/supabase.js';
 	import { goto } from '$app/navigation';
 	import Logo from '$lib/Logo.svelte';
+	import { Divider } from '@svelteuidev/core';
 
 
 	let email = '',
@@ -88,6 +89,10 @@
 								class="bg-mint p-2 px-8 rounded-lg hover:bg-mintHover transition-all">Login</button
 							>
 						</div>
+					</div>
+					<Divider override={{ my: "2rem !important" }} />
+					<div class="flex justify-center">
+						<h1 class="text-white">Haven't created an account yet? <a href="/signup" class="text-mint hover:text-mintHover transition-all">Sign up</a></h1>
 					</div>
 				</div>
 			</div>

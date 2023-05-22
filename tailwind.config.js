@@ -8,7 +8,9 @@ export default {
 				mintHover: '#029e7c',
 				mintHoverHover: '#008064',
 				blackBackground: '#13121a',
-				input: '#1c1c25'
+				input: '#1c1c25',
+				accent: "#577EF2",
+				accentHover: "#4f73e0"
 			}
 		}
 	},

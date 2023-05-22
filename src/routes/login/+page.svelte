@@ -4,23 +4,22 @@
 	import Logo from '$lib/Logo.svelte';
 	import { Divider } from '@svelteuidev/core';
 
-
 	let email = '',
 		password = '';
 
 	let valid = {
 		emailValid: true,
 		passwordValid: true
-	}
+	};
 
 	async function login() {
 		if (!email) {
-			valid.emailValid = false
-			return
+			valid.emailValid = false;
+			return;
 		}
 		if (!password) {
-			valid.passwordValid = false
-			return
+			valid.passwordValid = false;
+			return;
 		}
 		const { data, error } = await supabase.auth.signInWithPassword({
 			email,
@@ -62,8 +61,8 @@
 								name="email"
 								required
 								placeholder="example@gmail.com"
-								class:invalid="{!valid.emailValid}"
-								on:input={() => valid.emailValid = true}
+								class:invalid={!valid.emailValid}
+								on:input={() => (valid.emailValid = true)}
 								bind:value={email}
 							/>
 						</div>
@@ -76,8 +75,8 @@
 								name="password"
 								required
 								bind:value={password}
-								on:input={() => valid.passwordValid = true}
-								class:invalid="{!valid.passwordValid}"
+								on:input={() => (valid.passwordValid = true)}
+								class:invalid={!valid.passwordValid}
 							/>
 						</div>
 					</div>
@@ -90,9 +89,14 @@
 							>
 						</div>
 					</div>
-					<Divider override={{ my: "2rem !important" }} />
+					<Divider override={{ my: '2rem !important' }} />
 					<div class="flex justify-center">
-						<h1 class="text-white">Haven't created an account yet? <a href="/signup" class="text-mint hover:text-mintHover transition-all">Sign up</a></h1>
+						<h1 class="text-white">
+							Haven't created an account yet? <a
+								href="/signup"
+								class="text-mint hover:text-mintHover transition-all">Sign up</a
+							>
+						</h1>
 					</div>
 				</div>
 			</div>
@@ -111,8 +115,7 @@
 		color: rgba(162, 162, 163, 0.4);
 	}
 
-  .invalid {
-    border-color: red;
-  }
+	.invalid {
+		border-color: red;
+	}
 </style>
-

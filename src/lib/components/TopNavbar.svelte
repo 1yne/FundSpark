@@ -1,16 +1,19 @@
 <script lang="ts">
 	import { userStore } from '$lib/stores/UserStore';
 	import UserAvatarFilledAlt from 'carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte';
-	import Search from "carbon-icons-svelte/lib/Search.svelte";
-	import { Paper } from "@svelteuidev/core"
+	import Search from 'carbon-icons-svelte/lib/Search.svelte';
+	import { Paper } from '@svelteuidev/core';
 
 	function openModal() {
 		(document.querySelector('.modal') as HTMLDialogElement).showModal();
 	}
 	function closeModal(event: any) {
-		console.log(event.target.classList)
+		console.log(event.target.classList);
 		const modal = document.querySelector('.modal') as HTMLDialogElement;
-		if (event.target.classList.contains('closeButton') || event.target.classList.contains('modal')) {
+		if (
+			event.target.classList.contains('closeButton') ||
+			event.target.classList.contains('modal')
+		) {
 			modal.classList.add('closingAnimation');
 			modal.addEventListener(
 				'animationend',
@@ -21,12 +24,12 @@
 				{ once: true }
 			);
 		}
-	};
+	}
 </script>
 
 <div class="flex topNavbar mb-6 justify-between">
 	<div class="flex items-center">
-		<Paper override={{ backgroundColor: "#2d3134", padding: "12px" }}>
+		<Paper override={{ backgroundColor: '#2d3134', padding: '12px' }}>
 			<div class="flex gap-4 items-center">
 				<Search size={24} fill="white" />
 				<input class="bg-[#2d3134] outline-none text-white min-w-[16rem]" />

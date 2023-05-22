@@ -7,7 +7,7 @@
 	import Logo from '$lib/Logo.svelte';
 	import { Paper } from '@svelteuidev/core';
 	import { supabase } from '$lib/supabase';
-	import { invalidateAll }  from '$app/navigation';
+	import { invalidateAll } from '$app/navigation';
 
 	let sidebarOptions = [
 		{
@@ -31,12 +31,12 @@
 	let active = '';
 
 	async function logout() {
-		const { error } = await supabase.auth.signOut()
+		const { error } = await supabase.auth.signOut();
 
 		if (error) {
-			console.log(error)
+			console.log(error);
 		} else {
-			invalidateAll()
+			invalidateAll();
 		}
 	}
 </script>
@@ -56,7 +56,7 @@
 			flexDirection: 'column',
 			justifyContent: 'center',
 			alignItems: 'center',
-			backgroundColor: "#1c1c25"
+			backgroundColor: '#1c1c25'
 		}}
 	>
 		<div class="h-full flex flex-col justify-center gap-4">
@@ -75,7 +75,10 @@
 				</div>
 			{/each}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="p-2 rounded-lg transition-all hover:bg-mint/20 flex justify-center" on:click={logout}>
+			<div
+				class="p-2 rounded-lg transition-all hover:bg-mint/20 flex justify-center"
+				on:click={logout}
+			>
 				<Logout size={25} fill="gray" />
 			</div>
 		</div>

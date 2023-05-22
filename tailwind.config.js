@@ -7,8 +7,8 @@ export default {
 				mint: '#02c39a',
 				mintHover: '#029e7c',
 				mintHoverHover: '#008064',
-				blackBackground: "#13121a",
-				input: "#1c1c25"
+				blackBackground: '#13121a',
+				input: '#1c1c25'
 			}
 		}
 	},

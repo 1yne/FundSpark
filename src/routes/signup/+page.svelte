@@ -11,33 +11,33 @@
 		firstName = '',
 		lastName = '',
 		verifyPassword = '';
-  
-  let valid = {
-    emailValid: true,
-    passwordValid: true,
-    firstNameValid: true,
-    lastNameValid: true,
-    verifyPasswordValid: true,
-    usernameValid: true
-  }
+
+	let valid = {
+		emailValid: true,
+		passwordValid: true,
+		firstNameValid: true,
+		lastNameValid: true,
+		verifyPasswordValid: true,
+		usernameValid: true
+	};
 
 	async function signIn() {
-    if (!email) {
-      valid.emailValid = false
+		if (!email) {
+			valid.emailValid = false;
 			currentSlide = 'email';
 			return;
 		}
-    if (!username || !firstName || !lastName) {
-      valid.usernameValid = username ? true : false
-      valid.firstNameValid = firstName ? true : false
-      valid.lastNameValid = lastName ? true : false
+		if (!username || !firstName || !lastName) {
+			valid.usernameValid = username ? true : false;
+			valid.firstNameValid = firstName ? true : false;
+			valid.lastNameValid = lastName ? true : false;
 
 			currentSlide = 'details';
 			return;
 		}
 		if (!password || !verifyPassword || password !== verifyPassword) {
-      valid.passwordValid = password ? true : false
-      valid.verifyPasswordValid = verifyPassword ? true : false
+			valid.passwordValid = password ? true : false;
+			valid.verifyPasswordValid = verifyPassword ? true : false;
 
 			currentSlide = 'password';
 			return;
@@ -98,8 +98,8 @@
 										name="email"
 										required
 										placeholder="example@gmail.com"
-                    class:invalid="{!valid.emailValid}"
-                    on:input={() => valid.emailValid = true}
+										class:invalid={!valid.emailValid}
+										on:input={() => (valid.emailValid = true)}
 										bind:value={email}
 									/>
 								</div>
@@ -142,8 +142,8 @@
 										name="text"
 										required
 										placeholder="John"
-                    class:invalid="{!valid.firstNameValid}"
-                    on:input={() => valid.firstNameValid = true}
+										class:invalid={!valid.firstNameValid}
+										on:input={() => (valid.firstNameValid = true)}
 										bind:value={firstName}
 									/>
 								</div>
@@ -156,8 +156,8 @@
 										name="text"
 										required
 										placeholder="Smith"
-                    class:invalid="{!valid.lastNameValid}"
-                    on:input={() => valid.lastNameValid = true}
+										class:invalid={!valid.lastNameValid}
+										on:input={() => (valid.lastNameValid = true)}
 										bind:value={lastName}
 									/>
 								</div>
@@ -170,8 +170,8 @@
 										name="text"
 										required
 										placeholder="john_smith"
-                    class:invalid="{!valid.usernameValid}"
-                    on:input={() => valid.usernameValid = true}
+										class:invalid={!valid.usernameValid}
+										on:input={() => (valid.usernameValid = true)}
 										bind:value={username}
 									/>
 								</div>
@@ -218,8 +218,8 @@
 										name="password"
 										required
 										bind:value={password}
-                    class:invalid="{!valid.passwordValid}"
-                    on:input={() => valid.passwordValid = true}
+										class:invalid={!valid.passwordValid}
+										on:input={() => (valid.passwordValid = true)}
 									/>
 								</div>
 								<div class="relative my-3">
@@ -233,8 +233,8 @@
 										name="verify_password"
 										required
 										bind:value={verifyPassword}
-                    class:invalid="{!valid.verifyPasswordValid}"
-                    on:input={() => valid.verifyPasswordValid = true}
+										class:invalid={!valid.verifyPasswordValid}
+										on:input={() => (valid.verifyPasswordValid = true)}
 									/>
 								</div>
 							</div>
@@ -274,7 +274,7 @@
 		color: rgba(162, 162, 163, 0.4);
 	}
 
-  .invalid {
-    border-color: red;
-  }
+	.invalid {
+		border-color: red;
+	}
 </style>

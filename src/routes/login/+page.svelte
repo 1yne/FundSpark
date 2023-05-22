@@ -70,7 +70,7 @@
 							<label class="text-base text-gray-400" for="password">Password</label>
 							<input
 								type="password"
-								class="outline-none p-2 rounded-lg w-full text-white bg-input mt-2 px-4 border border-solid border-input transition-all"
+								class="outline-none password p-2 rounded-lg w-full text-white bg-input mt-2 px-4 border border-solid border-input transition-all"
 								autocomplete="off"
 								name="password"
 								required

@@ -36,3 +36,8 @@
 .modal.closingAnimation::backdrop {
 	animation: fade-out 500ms forwards !important;
 }
+
+.password {
+	font: large Verdana, sans-serif;
+	letter-spacing: 1px;
+}

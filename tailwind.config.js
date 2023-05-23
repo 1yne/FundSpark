@@ -9,6 +9,7 @@ export default {
 				mintHoverHover: '#008064',
 				blackBackground: '#13121a',
 				input: '#1c1c25',
+				inputHover: '#17171f',
 				accent: "#577EF2",
 				accentHover: "#4f73e0"
 			}

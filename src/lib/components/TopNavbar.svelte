@@ -29,10 +29,10 @@
 
 <div class="flex topNavbar mb-6 justify-between">
 	<div class="flex items-center">
-		<Paper override={{ backgroundColor: '#2d3134', padding: '12px' }}>
+		<Paper override={{ backgroundColor: '#1c1c25', padding: '12px' }}>
 			<div class="flex gap-4 items-center">
 				<Search size={24} fill="white" />
-				<input class="bg-[#2d3134] outline-none text-white min-w-[16rem]" />
+				<input class="bg-input outline-none text-white min-w-[16rem]" />
 			</div>
 		</Paper>
 	</div>

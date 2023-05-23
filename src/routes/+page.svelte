@@ -16,13 +16,12 @@
 	<div class="w-full flex justify-center">
 		<div class="flex flex-col gap-8 max-w-[48rem] w-full text-white text-center">
 			<h1 class="text-8xl font-mont">Connecting kindness, changing lives.</h1>
-			<p class="text-lg">
-				FundSpark is a crowdfunding platform that connects people in need with those who can provide
-				financial support, empowering individuals and communities through charitable giving.
+			<p class="text-xl">
+				FundSpark is a revolutionary crowdfunding platform that harnesses the power of collective generosity to fuel dreams, support causes, and transform lives.
 			</p>
 			<div class="flex justify-center">
 				<a
-					href="/login"
+					href="/signup"
 					class="p-4 bg-accent text-black text-lg flex rounded-lg px-6 hover:bg-accentHover transition-all"
 					>Get Started</a
 				>

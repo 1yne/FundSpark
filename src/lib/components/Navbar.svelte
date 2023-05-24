@@ -2,7 +2,7 @@
 	import { userStore } from '$lib/stores/UserStore';
 	import UserAvatarFilledAlt from 'carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte';
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
-	import { Paper } from '@svelteuidev/core';
+	import { Paper, Tooltip } from '@svelteuidev/core';
 	import Logo from '$lib/Logo.svelte';
 	import Add from "carbon-icons-svelte/lib/Add.svelte";
 
@@ -45,12 +45,14 @@
 		</Paper>
 	</div>
 	<div class="flex gap-4 items-center justify-end">
-		<div class="py-1 h-full">
-			<a
-				href="/dashboard/create"
-				class="h-full text-mint hover:text-mint/80 transition-all flex justify-center items-center"
-				><Add size={36} /></a
-			>
+		<div class="py-1 h-full flex justify-center items-center">
+			<Tooltip label={`${$userStore?.created_projects.length === 0 ? "Create your first FundWave" : "New FundWave"}`}>
+				<a
+					href="/dashboard/create"
+					class="h-full text-mint hover:text-mint/80 transition-all flex justify-center items-center"
+					><Add size={36} /></a
+				>
+			</Tooltip>
 		</div>
 		<a href="/dashboard/profile">
 			{#if $userStore?.profile_picture}
@@ -71,7 +73,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <dialog class="modal p-0 bg-blackBackground text-white" id="modal" on:click={closeModal}>
 	<div class="modal-wrapper p-4 w-full h-full">
-		<h1 class="text-4xl font-bold">Create your campaign</h1>
+		<h1 class="text-4xl font-bold">Create your {$userStore?.created_projects.length === 0 ? "first" : ""} FundWave</h1>
 		<button on:click={closeModal} class="closeButton">Close</button>
 	</div>
 </dialog>

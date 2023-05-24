@@ -1,13 +1,13 @@
 <script lang="ts">
 	export let size: number;
-	export let fill: string = "#02c39a"
+	export let fill= '#02c39a';
 </script>
 
 <svg height={size} width={size} viewBox="0 0 76.08695652173914 76.97559169115206"
 	><g
 		transform="translate(-4.7211691995793785, -4.2764217606195585) scale(0.8552843521239117)"
 		class="css-1c0s77x"
-		fill={fill}
+		{fill}
 		><circle xmlns="http://www.w3.org/2000/svg" cx="42.125" cy="19.337" r="9.916" /><circle
 			xmlns="http://www.w3.org/2000/svg"
 			cx="27.438"

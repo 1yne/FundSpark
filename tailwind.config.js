@@ -10,11 +10,11 @@ export default {
 				blackBackground: '#13121a',
 				input: '#1c1c25',
 				inputHover: '#17171f',
-				accent: "#577EF2",
-				accentHover: "#4f73e0",
-				navbarBG: "#1d1f21",
-				search: "#111117",
-				searchHover: "#09090d"
+				accent: '#577EF2',
+				accentHover: '#4f73e0',
+				navbarBG: '#1d1f21',
+				search: '#111117',
+				searchHover: '#09090d'
 			}
 		}
 	},

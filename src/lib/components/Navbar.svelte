@@ -34,7 +34,7 @@
 	</a>
 	<div class="flex items-center py-1">
 		<Paper
-			override={{ backgroundColor: '#111117', py: '8px', px: "12px", borderRadius: '8px' }}
+			override={{ backgroundColor: '#111117', py: '8px', px: '12px', borderRadius: '8px' }}
 			class="hover:bg-searchHover transition-all"
 		>
 			<div class="flex gap-4 items-center">

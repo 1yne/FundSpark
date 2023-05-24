@@ -40,7 +40,7 @@
 		>
 			<div class="flex gap-4 items-center">
 				<Search size={20} fill="white" />
-				<input class="outline-none text-white min-w-[20rem] bg-transparent" />
+				<input class="outline-none text-white min-w-[20rem] bg-transparent" placeholder="Search..." />
 			</div>
 		</Paper>
 	</div>

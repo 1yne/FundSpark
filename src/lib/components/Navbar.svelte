@@ -29,8 +29,8 @@
 	}
 </script>
 
-<div class="topNavbar justify-between bg-navbarBG p-2">
-	<a href="/dashboard" class="p-2 flex justify-between items-center">
+<div class="topNavbar justify-between bg-navbarBG px-4 py-2">
+	<a href="/dashboard" class="flex justify-between items-center">
 		<Logo size={32} />
 	</a>
 	<div class="flex items-center py-1">
@@ -61,7 +61,7 @@
 				/>
 			{:else}
 				<div class="">
-					<UserAvatarFilledAlt size={40} fill="white" />
+					<UserAvatarFilledAlt size={36} fill="white" />
 				</div>
 			{/if}
 		</a>

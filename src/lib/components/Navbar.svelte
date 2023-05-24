@@ -28,14 +28,14 @@
 	}
 </script>
 
-<div class="flex topNavbar justify-between bg-[#2d3134] p-2">
+<div class="topNavbar justify-between bg-navbarBG p-2">
 	<a href="/dashboard" class="p-2 flex justify-between items-center">
 		<Logo size={32} />
 	</a>
 	<div class="flex items-center py-1">
 		<Paper
-			override={{ backgroundColor: '#1c1c25', py: '8px', px: "12px", borderRadius: '8px' }}
-			class="hover:bg-inputHover transition-all"
+			override={{ backgroundColor: '#111117', py: '8px', px: "12px", borderRadius: '8px' }}
+			class="hover:bg-searchHover transition-all"
 		>
 			<div class="flex gap-4 items-center">
 				<Search size={20} fill="white" />
@@ -43,7 +43,7 @@
 			</div>
 		</Paper>
 	</div>
-	<div class="flex gap-4 items-center">
+	<div class="flex gap-4 items-center justify-end">
 		<div class="py-1 h-full">
 			<a
 				href="/create"
@@ -108,5 +108,10 @@
 		to {
 			opacity: 1;
 		}
+	}
+
+	.topNavbar {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
 	}
 </style>

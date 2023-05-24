@@ -46,7 +46,7 @@
 	<div class="flex gap-4 items-center justify-end">
 		<div class="py-1 h-full">
 			<a
-				href="/create"
+				href="/dashboard/create"
 				class="w-full h-full bg-mint rounded-lg px-4 text-sm hover:bg-mint/80 transition-all flex justify-center items-center"
 				>Start a campaign</a
 			>

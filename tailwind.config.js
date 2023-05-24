@@ -14,7 +14,7 @@ export default {
 				accentHover: "#4f73e0",
 				navbarBG: "#1d1f21",
 				search: "#111117",
-				searchHover: "#1a1a24"
+				searchHover: "#09090d"
 			}
 		}
 	},

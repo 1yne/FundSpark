@@ -4,6 +4,7 @@
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
 	import { Paper } from '@svelteuidev/core';
 	import Logo from '$lib/Logo.svelte';
+	import Add from "carbon-icons-svelte/lib/Add.svelte";
 
 	function openModal() {
 		(document.querySelector('.modal') as HTMLDialogElement).showModal();
@@ -47,8 +48,8 @@
 		<div class="py-1 h-full">
 			<a
 				href="/dashboard/create"
-				class="w-full h-full bg-mint rounded-lg px-4 text-sm hover:bg-mint/80 transition-all flex justify-center items-center"
-				>Start a campaign</a
+				class="h-full text-mint hover:text-mint/80 transition-all flex justify-center items-center"
+				><Add size={36} /></a
 			>
 		</div>
 		<a href="/dashboard/profile">

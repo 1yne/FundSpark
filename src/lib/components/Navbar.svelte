@@ -3,6 +3,7 @@
 	import UserAvatarFilledAlt from 'carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte';
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
 	import { Paper } from '@svelteuidev/core';
+	import Logo from '$lib/Logo.svelte';
 
 	function openModal() {
 		(document.querySelector('.modal') as HTMLDialogElement).showModal();
@@ -27,21 +28,29 @@
 	}
 </script>
 
-<div class="flex topNavbar mb-6 justify-between">
-	<div class="flex items-center">
-		<Paper override={{ backgroundColor: '#1c1c25', padding: '12px' }}>
+<div class="flex topNavbar justify-between bg-[#2d3134] p-2">
+	<a href="/dashboard" class="p-2 flex justify-between items-center">
+		<Logo size={32} />
+	</a>
+	<div class="flex items-center py-1">
+		<Paper
+			override={{ backgroundColor: '#1c1c25', py: '8px', px: "12px", borderRadius: '8px' }}
+			class="hover:bg-inputHover transition-all"
+		>
 			<div class="flex gap-4 items-center">
-				<Search size={24} fill="white" />
-				<input class="bg-input outline-none text-white min-w-[16rem]" />
+				<Search size={20} fill="white" />
+				<input class="outline-none text-white min-w-[20rem] bg-transparent" />
 			</div>
 		</Paper>
 	</div>
 	<div class="flex gap-4 items-center">
-		<a
-			href="/create"
-			class="w-full h-full bg-mint p-2 rounded-lg px-4 text-sm hover:bg-mint/80 transition-all flex justify-center items-center"
-			>Start a campaign</a
-		>
+		<div class="py-1 h-full">
+			<a
+				href="/create"
+				class="w-full h-full bg-mint rounded-lg px-4 text-sm hover:bg-mint/80 transition-all flex justify-center items-center"
+				>Start a campaign</a
+			>
+		</div>
 		<a href="/dashboard/profile">
 			{#if $userStore?.profile_picture}
 				<img
@@ -51,7 +60,7 @@
 				/>
 			{:else}
 				<div class="">
-					<UserAvatarFilledAlt size={46} fill="white" />
+					<UserAvatarFilledAlt size={40} fill="white" />
 				</div>
 			{/if}
 		</a>

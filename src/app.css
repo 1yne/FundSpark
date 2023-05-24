@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-	.font-mont {
+	.font-cabin {
 		font-family: 'Cabin';
 	}
 }

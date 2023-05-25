@@ -106,10 +106,7 @@
 
 <style>
 	input:focus {
-		background: linear-gradient(#1c1c25, #1c1c25) padding-box,
-			linear-gradient(to right, #02c39a, #029e7c) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
+		border: 1px solid #577EF2;
 	}
 	input::placeholder {
 		color: rgba(162, 162, 163, 0.4);

@@ -1,5 +1,4 @@
 <script>
-	import { Divider } from '@svelteuidev/core';
 	import { userStore } from '$lib/stores/UserStore';
 	import Checkmark from "carbon-icons-svelte/lib/Checkmark.svelte";
 
@@ -21,8 +20,7 @@
 				>Create</button
 			>
 		</div>
-		<Divider />
-		<div class="flex gap-8">
+		<div class="flex gap-8 mt-8">
 			<div class="mt-6 flex flex-col gap-4 w-3/4">
 				<div>
 					<h1 class="text-xl">Title:</h1>

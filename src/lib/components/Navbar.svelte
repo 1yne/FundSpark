@@ -30,9 +30,11 @@
 </script>
 
 <div class="topNavbar justify-between bg-navbarBG px-4 py-2">
-	<a href="/dashboard" class="flex justify-between items-center">
-		<Logo size={32} />
-	</a>
+	<div class="flex">
+		<a href="/dashboard" class="flex justify-between items-center">
+			<Logo size={32} />
+		</a>
+	</div>
 	<div class="flex items-center py-1">
 		<Paper
 			override={{ backgroundColor: '#111117', py: '8px', px: '12px', borderRadius: '8px' }}

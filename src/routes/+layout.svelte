@@ -24,8 +24,8 @@
 	export let data: LayoutData;
 </script>
 
-<div class="font-cabin w-full h-full wrapper bg-blackBackground">
-	<SvelteUIProvider override={{ width: '100%', height: '100%' }}>
+<SvelteUIProvider override={{ height: '100%', backgroundColor: "#13121a" }}>
+	<div class="font-cabin w-full h-full">
 		{#if !$page.route.id?.includes('dashboard')}
 			{#key data.url}
 				<div
@@ -39,8 +39,8 @@
 		{:else}
 			<slot />
 		{/if}
-	</SvelteUIProvider>
-</div>
+	</div>
+</SvelteUIProvider>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');

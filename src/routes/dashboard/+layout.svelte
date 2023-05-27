@@ -35,7 +35,7 @@
 				<div in:fly={{ y: -20, duration: 250, delay: 300 }} out:fly={{ y: -20, duration: 250 }}>
 					<Navbar />
 				</div>
-				<div class="content text-white p-6">
+				<div class="content text-white p-6 mt-16">
 					{#key data.url}
 						<div
 							in:fly={{ x: -5, duration: 300, delay: 300 }}

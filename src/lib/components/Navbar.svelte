@@ -29,7 +29,7 @@
 	}
 </script>
 
-<div class="topNavbar justify-between bg-navbarBG px-4 py-2">
+<div class="topNavbar justify-between bg-navbarBG px-4 py-2 fixed w-full">
 	<div class="flex">
 		<a href="/dashboard" class="flex justify-between items-center">
 			<Logo size={32} />

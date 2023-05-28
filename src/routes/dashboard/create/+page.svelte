@@ -1,9 +1,13 @@
 <script>
 	import { userStore } from '$lib/stores/UserStore';
-	import Checkmark from "carbon-icons-svelte/lib/Checkmark.svelte";
+	import Checkmark from 'carbon-icons-svelte/lib/Checkmark.svelte';
+	import ChevronDown from 'carbon-icons-svelte/lib/ChevronDown.svelte';
+	import ChevronUp from 'carbon-icons-svelte/lib/ChevronUp.svelte';
+	import { fly } from "svelte/transition"
 
-	let title = "",
-		description = ""
+	let title = '',
+		description = '',
+		stepOneToggle = false;
 </script>
 
 <svelte:head>
@@ -20,8 +24,8 @@
 				>Create</button
 			>
 		</div>
-		<div class="flex gap-8 mt-8">
-			<div class="mt-6 flex flex-col gap-4 w-3/4">
+		<div class="flex gap-8 mt-14">
+			<div class="flex flex-col gap-4 w-3/4">
 				<div>
 					<h1 class="text-xl">Title:</h1>
 					<input
@@ -38,25 +42,30 @@
 						class="w-full rounded-lg bg-input border border-solid border-input hover:bg-inputHover transition-all mt-2 outline-none px-4 py-2 focus:border focus:border-solid focus:border-accent"
 					/>
 				</div>
-				<div>
-					<h1 class="text-xl">Images: </h1>
-				</div>
 			</div>
-			<div class="mt-6">
-				<h1 class="text-xl mb-2">Step 1:</h1>
-				<div class="flex flex-col ml-2 gap-3">
-					{#if title.length > 8}
-						<h1 class="flex items-center gap-2"><Checkmark fill="#577EF2" size={24} />Give a good title</h1>
-					{:else}
-						<li>Give a good title</li>
-					{/if}
-
-					{#if description.length > 32}
-						<h1 class="flex items-center gap-2"><Checkmark fill="#577EF2" size={24} />Give a expressive description</h1>
-					{:else}
-						<li>Give a expressive description</li>
-					{/if}
+			<div class="bg-search p-4 rounded-lg flex-grow min-w-[25rem]">
+				<div class="flex flex-col justify-between items-center w-full bg-input rounded-lg p-4 transition-all">
+					<div class="w-full flex justify-between items-center">
+						<h1 class="text-xl mb-2">Step 1:</h1>
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
+						<div class={`cursor-pointer ${stepOneToggle ? "rotate-180" : "rotate-0"} transition-all`} on:click={() => stepOneToggle = !stepOneToggle}>
+							<ChevronDown />
+						</div>
+					</div>
+					{#if stepOneToggle}
+					<div class="flex flex-col ml-2 gap-3" in:fly={{ y: -20, duration: 100 }} out:fly={{ y: -20, duration: 100 }}>
+						{#if title.length > 8 && description.length > 32}
+							<li class="flex items-center gap-4">
+								<Checkmark fill="#577EF2" size={24} />Give a good title and an expressive
+								description
+							</li>
+						{:else}
+							<li>Give a good title and an expressive description</li>
+						{/if}
+					</div>
+				{/if}
 				</div>
+				
 			</div>
 		</div>
 	</div>

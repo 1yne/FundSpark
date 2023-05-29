@@ -3,11 +3,13 @@
 	import Checkmark from 'carbon-icons-svelte/lib/Checkmark.svelte';
 	import ChevronDown from 'carbon-icons-svelte/lib/ChevronDown.svelte';
 	import { fly } from 'svelte/transition';
+	import { Loader } from '@svelteuidev/core';
 
 	let title = '',
 		description = '',
 		target: string = '0',
-		stepOneToggle = false;
+		stepOneToggle = false,
+		loading = false;
 
 	$: valid = {
 		titleValid: true,
@@ -16,15 +18,18 @@
 	};
 
 	async function createFundWave() {
-		await fetch("/api/createFundWave", {
-			method: "POST",
+		loading = true;
+		const response = await fetch('/api/createFundWave', {
+			method: 'POST',
 			body: JSON.stringify({
 				title,
 				description,
 				target,
 				userId: $userStore?.user_num
 			})
-		})
+		});
+		const data = await response.json();
+		loading = false;
 	}
 </script>
 
@@ -38,8 +43,14 @@
 			<h1 class="text-3xl text-white">
 				Create your {$userStore?.created_projects.length === 0 ? 'first' : ''} FundWave
 			</h1>
-			<button class="bg-mint px-4 rounded-lg hover:bg-mintHover transition-all text-black" on:click={createFundWave}
-				>Create</button
+			<button
+				class="bg-mint px-4 rounded-lg hover:bg-mintHover transition-all text-black"
+				on:click={createFundWave}
+				>{#if loading}
+					<Loader variant='bars' size={50} color="dark" />
+				{:else}
+					Create
+				{/if}</button
 			>
 		</div>
 		<div class="flex gap-8 mt-14">

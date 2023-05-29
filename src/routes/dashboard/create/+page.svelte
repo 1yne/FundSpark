@@ -14,6 +14,18 @@
 		descriptionValid: true,
 		targetValid: true
 	};
+
+	async function createFundWave() {
+		await fetch("/api/createFundWave", {
+			method: "POST",
+			body: JSON.stringify({
+				title,
+				description,
+				target,
+				userId: $userStore?.user_num
+			})
+		})
+	}
 </script>
 
 <svelte:head>
@@ -26,7 +38,7 @@
 			<h1 class="text-3xl text-white">
 				Create your {$userStore?.created_projects.length === 0 ? 'first' : ''} FundWave
 			</h1>
-			<button class="bg-mint px-4 rounded-lg hover:bg-mintHover transition-all text-black"
+			<button class="bg-mint px-4 rounded-lg hover:bg-mintHover transition-all text-black" on:click={createFundWave}
 				>Create</button
 			>
 		</div>

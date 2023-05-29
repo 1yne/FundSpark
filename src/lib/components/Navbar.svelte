@@ -7,6 +7,8 @@
 	import Add from "carbon-icons-svelte/lib/Add.svelte";
 	import WalletIcon from "$lib/WalletIcon.svelte"
 
+	let searchInputFocused = false
+
 	function openModal() {
 		(document.querySelector('.modal') as HTMLDialogElement).showModal();
 	}
@@ -39,11 +41,11 @@
 	<div class="flex items-center py-1">
 		<Paper
 			override={{ backgroundColor: '#111117', py: '8px', px: '12px', borderRadius: '8px' }}
-			class="hover:bg-searchHover transition-all"
+			class={`hover:bg-searchHover transition-all border border-solid border-search outline-none ${searchInputFocused ? "border border-solid border-accent" : ""}`}
 		>
 			<div class="flex gap-4 items-center">
 				<Search size={20} fill="white" />
-				<input class="outline-none text-white min-w-[20rem] bg-transparent" placeholder="Search..." />
+				<input class="outline-none text-white min-w-[20rem] bg-transparent" placeholder="Search..." on:focus={() => searchInputFocused = true} on:focusout={() => searchInputFocused = false} />
 			</div>
 		</Paper>
 	</div>

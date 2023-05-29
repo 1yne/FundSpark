@@ -3,7 +3,7 @@
 	import UserAvatarFilledAlt from 'carbon-icons-svelte/lib/UserAvatarFilledAlt.svelte';
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
 	import { Paper, Tooltip } from '@svelteuidev/core';
-	import WatsonHealthContourFinding from "carbon-icons-svelte/lib/WatsonHealthContourFinding.svelte";
+	import WalletIcon from "$lib/WalletIcon.svelte"
 
 
 	function openModal() {
@@ -43,7 +43,7 @@
 	</div>
 	<div class="flex gap-4 items-center">
 		<div class="bg-search px-4 py-2 hover:bg-searchHover transition-all rounded-lg flex justify-between items-center gap-2 text-white">
-			<WatsonHealthContourFinding size={26} fill="#577EF2" />
+			<WalletIcon size={26} />
 			<h1>{$userStore?.wallet}</h1>
 		</div>
 		<div class="py-1 h-full flex justify-center items-center">

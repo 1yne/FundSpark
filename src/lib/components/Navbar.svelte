@@ -5,7 +5,6 @@
 	import { Paper, Tooltip } from '@svelteuidev/core';
 	import Logo from '$lib/Logo.svelte';
 	import Add from "carbon-icons-svelte/lib/Add.svelte";
-	import WatsonHealthContourFinding from "carbon-icons-svelte/lib/WatsonHealthContourFinding.svelte";
 	import WalletIcon from "$lib/WalletIcon.svelte"
 
 	function openModal() {

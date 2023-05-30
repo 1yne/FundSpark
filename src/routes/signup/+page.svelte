@@ -265,7 +265,7 @@
 
 <style>
 	input:focus {
-		border: 1px solid #577EF2;
+		border: 1px solid #577ef2;
 	}
 	input::placeholder {
 		color: rgba(162, 162, 163, 0.4);

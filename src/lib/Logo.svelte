@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let size: number;
-	export let fill= '#02c39a';
+	export let fill = '#02c39a';
 </script>
 
 <svg height={size} width={size} viewBox="0 0 76.08695652173914 76.97559169115206"

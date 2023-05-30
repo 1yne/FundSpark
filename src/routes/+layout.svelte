@@ -24,7 +24,7 @@
 	export let data: LayoutData;
 </script>
 
-<SvelteUIProvider override={{ height: '100%', backgroundColor: "#13121a" }}>
+<SvelteUIProvider override={{ height: '100%', backgroundColor: '#13121a' }}>
 	<div class="font-cabin w-full h-full">
 		{#if !$page.route.id?.includes('dashboard')}
 			{#key data.url}

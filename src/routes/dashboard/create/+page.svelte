@@ -7,7 +7,7 @@
 
 	let title = '',
 		description = '',
-		target: string = '0',
+		target = '0',
 		stepOneToggle = false,
 		loading = false;
 
@@ -19,7 +19,7 @@
 
 	async function createFundWave() {
 		loading = true;
-		const response = await fetch('/api/createFundWave', {
+		await fetch('/api/createFundWave', {
 			method: 'POST',
 			body: JSON.stringify({
 				title,
@@ -28,7 +28,6 @@
 				userId: $userStore?.user_num
 			})
 		});
-		const data = await response.json();
 		loading = false;
 	}
 </script>
@@ -47,7 +46,7 @@
 				class="bg-mint px-4 rounded-lg hover:bg-mintHover transition-all text-black"
 				on:click={createFundWave}
 				>{#if loading}
-					<Loader variant='bars' size={50} color="dark" />
+					<Loader variant="bars" size={50} color="dark" />
 				{:else}
 					Create
 				{/if}</button

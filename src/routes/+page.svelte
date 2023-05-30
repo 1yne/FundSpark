@@ -1,11 +1,10 @@
 <script lang="ts">
 	import Logo from '$lib/Logo.svelte';
 	import { io } from '@svelteuidev/composables';
-	import { fly } from "svelte/transition"
+	import { fly } from 'svelte/transition';
 
 	let visible: boolean;
-	// @ts-ignore
-	const handleChange = ({ detail }) => {
+	const handleChange = ({ detail }:{ detail: any }) => {
 		visible = detail.inView;
 	};
 </script>
@@ -28,7 +27,9 @@
 			on:change={handleChange}
 		>
 			{#if visible}
-				<h1 class="text-8xl" in:fly={{ y: 50, duration: 500 }}>Connecting kindness, changing lives.</h1>
+				<h1 class="text-8xl" in:fly={{ y: 50, duration: 500 }}>
+					Connecting kindness, changing lives.
+				</h1>
 				<p class="text-xl" in:fly={{ y: 50, duration: 500, delay: 200 }}>
 					FundSpark is a revolutionary crowdfunding platform that harnesses the power of collective
 					generosity to fuel dreams, support causes, and transform lives.

@@ -7,8 +7,8 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	const newFundWaveData = {
 		name: title,
-    description,
-    author: parseInt(userId),
+		description,
+		author: parseInt(userId),
 		target: parseInt(target),
 		likedUsers: [],
 		comments: [],

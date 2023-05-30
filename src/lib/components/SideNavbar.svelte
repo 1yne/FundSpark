@@ -71,10 +71,7 @@
 				</div>
 			{/each}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div
-				class="p-2 rounded-lg transition-all hover:bg-mint/20 "
-				on:click={logout}
-			>
+			<div class="p-2 rounded-lg transition-all hover:bg-mint/20" on:click={logout}>
 				<Logout size={25} fill="gray" />
 			</div>
 		</div>

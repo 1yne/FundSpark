@@ -4,10 +4,10 @@
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
 	import { Paper, Tooltip } from '@svelteuidev/core';
 	import Logo from '$lib/Logo.svelte';
-	import Add from "carbon-icons-svelte/lib/Add.svelte";
-	import WalletIcon from "$lib/WalletIcon.svelte"
+	import Add from 'carbon-icons-svelte/lib/Add.svelte';
+	import WalletIcon from '$lib/WalletIcon.svelte';
 
-	let searchInputFocused = false
+	let searchInputFocused = false;
 </script>
 
 <div class="topNavbar justify-between bg-navbarBG px-4 py-2 fixed w-full">
@@ -19,21 +19,34 @@
 	<div class="flex items-center py-1">
 		<Paper
 			override={{ backgroundColor: '#111117', py: '8px', px: '12px', borderRadius: '8px' }}
-			class={`hover:bg-searchHover transition-all border border-solid border-search outline-none ${searchInputFocused ? "border border-solid border-accent" : ""}`}
+			class={`hover:bg-searchHover transition-all border border-solid border-search outline-none ${
+				searchInputFocused ? 'border border-solid border-accent' : ''
+			}`}
 		>
 			<div class="flex gap-4 items-center">
 				<Search size={20} fill="white" />
-				<input class="outline-none text-white min-w-[20rem] bg-transparent" placeholder="Search..." on:focus={() => searchInputFocused = true} on:focusout={() => searchInputFocused = false} />
+				<input
+					class="outline-none text-white min-w-[20rem] bg-transparent"
+					placeholder="Search..."
+					on:focus={() => (searchInputFocused = true)}
+					on:focusout={() => (searchInputFocused = false)}
+				/>
 			</div>
 		</Paper>
 	</div>
 	<div class="flex gap-4 items-center justify-end">
-		<div class="bg-search px-4 py-2 hover:bg-searchHover transition-all rounded-lg flex justify-between items-center gap-2 text-white">
+		<div
+			class="bg-search px-4 py-2 hover:bg-searchHover transition-all rounded-lg flex justify-between items-center gap-2 text-white"
+		>
 			<WalletIcon size={26} />
 			<h1>{$userStore?.wallet}</h1>
 		</div>
 		<div class="py-1 h-full flex justify-center items-center">
-			<Tooltip label={`${$userStore?.created_projects.length === 0 ? "Create your first FundWave" : "New FundWave"}`}>
+			<Tooltip
+				label={`${
+					$userStore?.created_projects.length === 0 ? 'Create your first FundWave' : 'New FundWave'
+				}`}
+			>
 				<a
 					href="/dashboard/create"
 					class="h-full text-mint hover:text-mint/80 transition-all flex justify-center items-center"

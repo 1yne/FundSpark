@@ -4,19 +4,25 @@
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
 	import { Paper, Tooltip } from '@svelteuidev/core';
 	import WalletIcon from '$lib/WalletIcon.svelte';
+
+	let searchInputFocused = false
 </script>
 
 <div class="flex topNavbar justify-between bg-[#2d3134] px-4 py-2">
 	<div class="flex items-center py-1">
 		<Paper
 			override={{ backgroundColor: '#111117', py: '8px', px: '12px', borderRadius: '8px' }}
-			class="hover:bg-searchHover transition-all"
+			class={`hover:bg-searchHover transition-all border border-solid border-search outline-none ${
+				searchInputFocused ? '!border !border-solid !border-accent' : ''
+			}`}
 		>
 			<div class="flex gap-4 items-center">
 				<Search size={20} fill="white" />
 				<input
 					class="outline-none text-white min-w-[20rem] bg-transparent"
 					placeholder="Search..."
+					on:focus={() => (searchInputFocused = true)}
+					on:focusout={() => (searchInputFocused = false)}
 				/>
 			</div>
 		</Paper>

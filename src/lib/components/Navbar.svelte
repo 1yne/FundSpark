@@ -20,7 +20,7 @@
 		<Paper
 			override={{ backgroundColor: '#111117', py: '8px', px: '12px', borderRadius: '8px' }}
 			class={`hover:bg-searchHover transition-all border border-solid border-search outline-none ${
-				searchInputFocused ? 'border border-solid border-accent' : ''
+				searchInputFocused ? '!border !border-solid !border-accent' : ''
 			}`}
 		>
 			<div class="flex gap-4 items-center">

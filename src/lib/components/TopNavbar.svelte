@@ -4,8 +4,17 @@
 	import Search from 'carbon-icons-svelte/lib/Search.svelte';
 	import { Paper, Tooltip } from '@svelteuidev/core';
 	import WalletIcon from '$lib/WalletIcon.svelte';
+	import { goto } from '$app/navigation';
 
-	let searchInputFocused = false
+	let searchInputFocused = false,
+		searchQuery = ""
+
+	async function onKeyDown(e: KeyboardEvent) {
+		if (searchInputFocused && e.keyCode === 13) {
+			console.log("search")
+			goto(`/dashboard/search?q=${searchQuery}`)
+		}
+	}
 </script>
 
 <div class="flex topNavbar justify-between bg-[#2d3134] px-4 py-2">
@@ -23,6 +32,8 @@
 					placeholder="Search..."
 					on:focus={() => (searchInputFocused = true)}
 					on:focusout={() => (searchInputFocused = false)}
+					bind:value={searchQuery}
+					on:keydown={onKeyDown}
 				/>
 			</div>
 		</Paper>

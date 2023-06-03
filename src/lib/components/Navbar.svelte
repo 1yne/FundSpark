@@ -13,7 +13,6 @@
 
 	async function onKeyDown(e: KeyboardEvent) {
 		if (searchInputFocused && e.keyCode === 13) {
-			console.log("search")
 			goto(`/dashboard/search?q=${searchQuery}`)
 		}
 	}

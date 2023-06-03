@@ -8,7 +8,6 @@ export const load: PageServerLoad = async ({ url }) => {
   if (error) {
     console.log('error: ', error);
   }
-  console.log(matches)
 
   return {
     searchQuery,

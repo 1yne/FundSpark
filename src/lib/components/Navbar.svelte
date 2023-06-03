@@ -9,11 +9,11 @@
 	import { goto } from '$app/navigation';
 
 	let searchInputFocused = false,
-		searchQuery = ""
+		searchQuery = '';
 
 	async function onKeyDown(e: KeyboardEvent) {
 		if (searchInputFocused && e.keyCode === 13) {
-			goto(`/dashboard/search?q=${searchQuery}`)
+			goto(`/dashboard/search?q=${searchQuery}`);
 		}
 	}
 </script>

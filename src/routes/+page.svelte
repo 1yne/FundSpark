@@ -4,7 +4,7 @@
 	import { fly } from 'svelte/transition';
 
 	let visible: boolean;
-	const handleChange = ({ detail }:{ detail: any }) => {
+	const handleChange = ({ detail }: { detail: any }) => {
 		visible = detail.inView;
 	};
 </script>

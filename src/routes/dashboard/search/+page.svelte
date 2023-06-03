@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { PageData } from './$types';
+	import type { PageData } from './$types';
 
-  export let data: PageData;
+	export let data: PageData;
 </script>
 
 <svelte:head>
-  <title>Search Results: {data.searchQuery}</title>
+	<title>Search Results: {data.searchQuery}</title>
 </svelte:head>
 
-<h1>Search Results: </h1>
+<h1>Search Results:</h1>

@@ -14,5 +14,7 @@ export type SearchResultFW = {
 	name: string,
 	description: string,
 	target: number,
-	amount: number
+	amount: number,
+	likes: number,
+	images: string
 }

@@ -9,3 +9,10 @@ export type User = {
 	wallet: number;
 	user_id: string;
 };
+
+export type SearchResultFW = {
+	name: string,
+	description: string,
+	target: number,
+	amount: number
+}

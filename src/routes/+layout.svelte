@@ -5,7 +5,6 @@
 	import type { User } from '$lib/types';
 	import { SvelteUIProvider } from '@svelteuidev/core';
 	import { page } from '$app/stores';
-	import type { LayoutData } from './$types';
 	import { fly } from 'svelte/transition';
 
 	supabase.auth.onAuthStateChange(async (event, session) => {
@@ -21,7 +20,7 @@
 		}
 	});
 
-	export let data: LayoutData;
+	export let data;
 </script>
 
 <SvelteUIProvider override={{ height: '100%', backgroundColor: '#13121a' }}>

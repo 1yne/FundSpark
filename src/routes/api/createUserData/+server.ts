@@ -1,8 +1,7 @@
-import type { RequestHandler } from '@sveltejs/kit';
 import { supabase } from '$lib/supabase.ts';
 import { json } from '@sveltejs/kit';
 
-export const POST: RequestHandler = async ({ request }) => {
+export const POST = async ({ request }) => {
 	const { username, id } = await request.json();
 	const newUserData = {
 		username,

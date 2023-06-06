@@ -1,7 +1,6 @@
-import type { PageServerLoad } from './$types';
 import { supabase } from '$lib/supabase.ts';
 
-export const load: PageServerLoad = async ({ url }) => {
+export const load = async ({ url }) => {
 	const searchQuery = url.searchParams.get('q');
 
 	const { data: matches, error } = await supabase

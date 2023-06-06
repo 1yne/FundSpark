@@ -5,7 +5,7 @@
 	import { fly } from 'svelte/transition';
 	import { page } from '$app/stores';
 
-	export let data: import('./$types').LayoutData;
+	export let data;
 </script>
 
 <div class="flex h-full w-full bg-[#13121a] flex-col">

@@ -24,7 +24,7 @@
 					out:fly={{ y: -20, duration: 250 }}
 					class="w-full"
 				>
-					<TopNavbar />
+					<TopNavbar wallet={data.userWallet} />
 				</div>
 				<div class="content text-white p-6">
 					{#key data.url}
@@ -41,7 +41,7 @@
 		{:else}
 			<div class="flex flex-col w-full h-full">
 				<div in:fly={{ y: -20, duration: 250, delay: 300 }} out:fly={{ y: -20, duration: 250 }}>
-					<Navbar />
+					<Navbar wallet={data.userWallet} />
 				</div>
 				<div class="content text-white p-6 mt-16">
 					{#key data.url}

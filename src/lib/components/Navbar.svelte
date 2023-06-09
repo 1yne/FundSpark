@@ -11,6 +11,8 @@
 	let searchInputFocused = false,
 		searchQuery = '';
 
+	export let wallet = 100
+
 	async function onKeyDown(e: KeyboardEvent) {
 		if (searchInputFocused && e.keyCode === 13) {
 			goto(`/dashboard/search?q=${searchQuery}`);
@@ -49,7 +51,7 @@
 			class="bg-search px-4 py-2 hover:bg-searchHover transition-all rounded-lg flex justify-between items-center gap-2 text-white"
 		>
 			<WalletIcon size={26} />
-			<h1>{$userStore?.wallet}</h1>
+			<h1>{wallet}</h1>
 		</div>
 		<div class="py-1 h-full flex justify-center items-center">
 			<Tooltip

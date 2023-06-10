@@ -9,10 +9,10 @@ export const load = async ({ url }) => {
 		const {
 			data: { user }
 		} = await supabase.auth.getUser();
-		
+
 		const { data, error } = await supabase.from('User').select().eq('user_id', user.id);
-		
-		if (error) console.log(error)
+
+		if (error) console.log(error);
 
 		userWallet = data[0].wallet;
 		if (!user) {

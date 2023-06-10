@@ -11,7 +11,7 @@
 	let searchInputFocused = false,
 		searchQuery = '';
 
-	export let wallet = 100
+	export let wallet = 100;
 
 	async function onKeyDown(e: KeyboardEvent) {
 		if (searchInputFocused && e.keyCode === 13) {

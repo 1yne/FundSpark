@@ -11,10 +11,10 @@ export type User = {
 };
 
 export type SearchResultFW = {
-	name: string,
-	description: string,
-	target: number,
-	amount: number,
-	likes: number,
-	images: string
-}
+	name: string;
+	description: string;
+	target: number;
+	amount: number;
+	likes: number;
+	images: string;
+};

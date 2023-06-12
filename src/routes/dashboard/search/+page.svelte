@@ -1,11 +1,9 @@
 <script>
 	// @ts-nocheck
 
-	import { SimpleGrid } from "@svelteuidev/core"
-	import SearchResultCard from "$lib/components/SearchResultCard.svelte";
+	import { SimpleGrid } from '@svelteuidev/core';
+	import SearchResultCard from '$lib/components/SearchResultCard.svelte';
 	export let data;
-
-	$: console.log(data.matches)
 </script>
 
 <svelte:head>

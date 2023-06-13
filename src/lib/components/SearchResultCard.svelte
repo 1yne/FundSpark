@@ -3,7 +3,17 @@
 	export let title: string, description: string, image: Blob | undefined;
 </script>
 
-<Paper override={{ backgroundColor: '#1c1c25', color: 'white', padding: 0, borderRadius: '8px' }}>
+<Paper
+	override={{
+		backgroundColor: '#1c1c25',
+		color: 'white',
+		padding: 0,
+		borderRadius: '8px',
+		maxWidth: '24rem',
+		width: '100%'
+	}}
+	class="cursor-pointer hover:bg-inputHover transition-all"
+>
 	<img src={image ? URL.createObjectURL(image) : '/NoImage.jpeg'} alt="" class="w-full h-48" />
 	<div class="content p-4">
 		<h1>{title}</h1>

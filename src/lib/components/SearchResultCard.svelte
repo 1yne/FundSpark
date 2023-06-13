@@ -17,7 +17,7 @@
 	>
 		<img src={image ? URL.createObjectURL(image) : '/NoImage.jpeg'} alt="" class="w-full h-48" />
 		<div class="content p-4">
-			<h1 class="text-3xl font-bold mb-2">{title}</h1>
+			<h1 class="text-3xl font-bold mb-1">{title}</h1>
 			<p>{description}</p>
 		</div>
 	</Paper>

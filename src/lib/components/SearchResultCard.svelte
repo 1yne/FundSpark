@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Paper } from '@svelteuidev/core';
+	import NoImage from 'carbon-icons-svelte/lib/NoImage.svelte';
 	export let title: string, description: string, image: Blob | undefined, id: string;
 </script>
 
@@ -15,7 +16,13 @@
 		}}
 		class="cursor-pointer hover:bg-inputHover transition-all"
 	>
-		<img src={image ? URL.createObjectURL(image) : '/NoImage.jpeg'} alt="" class="w-full h-48" />
+		{#if image}
+			<img src={URL.createObjectURL(image)} alt="" class="w-full h-48" />
+		{:else}
+			<div class="bg-gray-600 w-full h-48 flex justify-center items-center">
+				<NoImage size={36} />
+			</div>
+		{/if}
 		<div class="content p-4">
 			<h1 class="text-3xl font-bold mb-1">{title}</h1>
 			<p>{description}</p>

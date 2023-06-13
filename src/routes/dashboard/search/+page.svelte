@@ -13,6 +13,6 @@
 <h1 class="mb-4">Search results for {data.searchQuery} ({data.matches?.length})</h1>
 <SimpleGrid cols={4}>
 	{#each data.matches as searchResult}
-		<SearchResultCard title={searchResult.name} description={searchResult.description} />
+		<SearchResultCard title={searchResult.name} description={searchResult.description} id={searchResult.id} />
 	{/each}
 </SimpleGrid>

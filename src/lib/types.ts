@@ -18,3 +18,17 @@ export type SearchResultFW = {
 	likes: number;
 	images: string;
 };
+
+export type FundWave = {
+	id: number,
+	created_at: string,
+	author: number,
+	name: string,
+	description: string,
+	target: number,
+	amount_raised: number,
+	images: Blob[] | null,
+	likes: number,
+	liked_users: number[] | null,
+	comments: [] | null
+}

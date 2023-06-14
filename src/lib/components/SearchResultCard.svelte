@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Paper } from '@svelteuidev/core';
 	import NoImage from 'carbon-icons-svelte/lib/NoImage.svelte';
+	import { truncateText } from "$lib/utils"
+
 	export let title: string, description: string, image: Blob | undefined, id: string;
 </script>
 
@@ -25,7 +27,7 @@
 		{/if}
 		<div class="content p-4">
 			<h1 class="text-3xl font-bold mb-1">{title}</h1>
-			<p>{description}</p>
+			<p>{truncateText(description)}</p>
 		</div>
 	</Paper>
 </a>

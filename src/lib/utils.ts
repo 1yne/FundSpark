@@ -3,5 +3,5 @@ export function isNumeric(num: string) {
 }
 
 export function truncateText(text: string) {
-	return text.substring(0, 64).concat("...")
+	return text.substring(0, 64).concat('...');
 }

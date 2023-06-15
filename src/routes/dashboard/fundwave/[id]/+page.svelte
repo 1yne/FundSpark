@@ -1,9 +1,9 @@
 <script>
-  export let data
+	export let data;
 </script>
 
 <svelte:head>
-  <title>{data.fundwave.name}</title>
+	<title>{data.fundwave.name}</title>
 </svelte:head>
 
 <h1>Page</h1>

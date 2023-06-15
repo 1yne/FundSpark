@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Paper } from '@svelteuidev/core';
 	import NoImage from 'carbon-icons-svelte/lib/NoImage.svelte';
-	import { truncateText } from "$lib/utils"
+	import { truncateText } from '$lib/utils';
 
 	export let title: string, description: string, image: Blob | undefined, id: string;
 </script>

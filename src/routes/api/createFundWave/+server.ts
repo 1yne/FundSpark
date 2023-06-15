@@ -10,7 +10,7 @@ export const POST = async ({ request }) => {
 		author: parseInt(userId),
 		target: parseInt(target),
 		liked_users: [],
-		comments: [],
+		comments: []
 	};
 
 	const { error } = await supabase.from('FundWaves').insert(newFundWaveData);

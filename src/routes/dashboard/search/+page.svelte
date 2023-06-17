@@ -10,7 +10,7 @@
 	<title>Search Results: {data.searchQuery}</title>
 </svelte:head>
 
-<h1 class="mb-4 text-lg">Search results for {data.searchQuery} ({data.matches?.length})</h1>
+<h1 class="mb-4 text-lg">Search results for "{data.searchQuery}" ({data.matches?.length})</h1>
 <SimpleGrid cols={4}>
 	{#each data.matches as searchResult}
 		<SearchResultCard

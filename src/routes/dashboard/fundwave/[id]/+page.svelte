@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.fundwave.name}</title>
+	<title>{data.fundwave.name} | FundSpark</title>
 </svelte:head>
 
 <h1>Page</h1>

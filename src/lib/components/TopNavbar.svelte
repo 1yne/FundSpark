@@ -7,7 +7,8 @@
 	import { goto } from '$app/navigation';
 
 	let searchInputFocused = false,
-		searchQuery = '';
+		searchQuery = '',
+		searchInput: HTMLInputElement;
 
 	export let wallet = 100;
 
@@ -16,7 +17,16 @@
 			goto(`/dashboard/search?q=${searchQuery}`);
 		}
 	}
+
+	function monitorForSearch(e: KeyboardEvent) {
+		if (e.keyCode === 191) {
+			searchInput.focus()
+			searchInputFocused = true
+		}
+	}
 </script>
+
+<svelte:window on:keydown|preventDefault={monitorForSearch} />
 
 <div class="flex topNavbar justify-between bg-[#2d3134] px-4 py-2">
 	<div class="flex items-center py-1">
@@ -35,6 +45,7 @@
 					on:focusout={() => (searchInputFocused = false)}
 					bind:value={searchQuery}
 					on:keydown={onKeyDown}
+					bind:this={searchInput}
 				/>
 			</div>
 		</Paper>

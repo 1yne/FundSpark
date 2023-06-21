@@ -6,4 +6,8 @@
 	<title>{data.fundwave.name} | FundSpark</title>
 </svelte:head>
 
-<h1>Page</h1>
+<div class="w-full flex justify-center">
+	<div class="max-w-[64rem] w-full">
+		<h1 class="text-5xl font-bold mb-1">{data.fundwave.name}</h1>
+	</div>
+</div>
